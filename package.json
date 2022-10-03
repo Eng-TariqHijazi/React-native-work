@@ -12,14 +12,19 @@
     "expo": "~46.0.13",
     "expo-status-bar": "~1.4.0",
     "express": "^4.18.1",
+    "formik": "^2.2.9",
     "react": "18.0.0",
-    "react-native": "0.69.6"
+    "react-native": "0.69.6",
+    "react-native-paper": "^5.0.0-rc.6",
+    "react-native-vector-icons": "^9.2.0",
+    "react-navigation": "^4.4.4",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
   "private": true,
-  "author": "",
+  "author": "Tariq Hijazi <Tariq.t.m.hijazi@gmail.com>",
   "license": "ISC",
   "description": ""
 }
