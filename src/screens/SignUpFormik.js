@@ -18,7 +18,6 @@ import { InputFiled } from "../components";
 import { ActivityIndicator } from "react-native-paper";
 export default function SignUpFormik() {
   const [ispasswordShown, setIsPasswordShown] = useState(true);
-  const [ispassword, setIsPassword] = useState("");
   const showPasswordHandler = () => {
     setIsPasswordShown((currentState) => !currentState);
   };
@@ -34,11 +33,7 @@ export default function SignUpFormik() {
       ),
     confirm: yup
       .string()
-      .required()
-      .matches(
-        /^(?=.*[A-Z])(?=.*\d)[a-zA-Z0-9!@#$%./^&*()_+<>,~`"':;]{8,}$/,
-        "password must 8 char"
-      ),
+      .oneOf([yup.ref("Password"), null], "Passwords must match"),
   });
   return (
     <KeyboardAvoidingView
@@ -181,15 +176,11 @@ export default function SignUpFormik() {
                         )
                       }
                     />
-                    {!(
-                      values.confirm.indexOf(values.Password) === 0 &&
-                      values.Password.indexOf(values.confirm) === 0
-                    ) &&
-                      touched.confirm && (
-                        <Text style={{ color: "red" }}>
-                          Confirm Password is not Equal the Password
-                        </Text>
-                      )}
+                    {errors.confirm && touched.confirm && (
+                      <Text style={{ color: "red" }}>
+                        Confirm Password is not Equal the Password
+                      </Text>
+                    )}
                     <InputFiled
                       Label={"Phone number"}
                       Placeholder={"0123456789"}
