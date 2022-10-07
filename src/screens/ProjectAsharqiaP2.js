@@ -215,10 +215,3 @@ const styles = StyleSheet.create({
   },
 });
 
-// const loadFonts = () => {
-//   return Font.loadAsync({
-//     "Inter-SemiBoldItalic":
-//       "https://rsms.me/inter/font-files/Inter-SemiBoldItalic.otf?v=3.12",
-//     CairoSemiBold: require("../../assets/fonts/Cairo-VariableFont_wght.ttf"),
-//   });
-// };
