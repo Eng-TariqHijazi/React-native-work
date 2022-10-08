@@ -80,7 +80,7 @@ export default function ProjectAsharqiaP2() {
       <ImageBackground
         resizeMode="cover"
         source={require("../../assets/image.png")}
-        style={[styles.header, { width }]}
+        style={[styles.header, { width ,position:'absolute',zIndex:1}]}
       >
         <StatusBar style="auto" />
         <Text style={styles.headerText}>المقاولات</Text>
@@ -131,7 +131,7 @@ export default function ProjectAsharqiaP2() {
     <View style={[styles.container, { width, height }]}>
       <Header />
 
-      <SafeAreaView style={{ height: height * 0.8, left: 8 }}>
+      <SafeAreaView style={{ height: height * 0.83, left: 8,marginTop:95 }}>
         <FlatList
           ListHeaderComponent={
             <View style={styles.body}>
@@ -210,6 +210,7 @@ const styles = StyleSheet.create({
   },
   textFooter: { fontSize: 8, fontFamily: "CairoSBold", marginTop: 8 },
   body: {
+    marginTop:40,
     width: "93.5%",
     height: 50,
   },

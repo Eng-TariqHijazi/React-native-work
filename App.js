@@ -9,5 +9,5 @@ import {
   ProjectAsharqiaP4,
 } from "./src/screens/";
 export default function App() {
-  return <ProjectAsharqia />;
+  return <ProjectAsharqiaP2 />;
 }
